@@ -1,0 +1,29 @@
+{% extends "templs/formTemplate.html" %}
+{% block title %} Cadastro de Cliente {% endblock %}
+{% block formulario %}
+<div style="text-align:center">
+    <h2>Formulário de Cadastro de Cliente</h2>
+    <form action="/cadastrarCli" method="POST">
+        <div class="container-fluid">
+            <label for="name" class="form-label">Nome:</label>
+            <input type="text" id="name" name="name" placeholder="Digite seu Nome" class="form-control">
+        </div>
+        <div class="container-fluid">
+            <label for="cpf" class="form-label">CPF:</label>
+            <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" class="form-control">
+        </div>
+        <div class="container-fluid">
+            <label for="user" class="form-label">Usuário:</label>
+            <input type="text" id="user" name="user" placeholder="Digite seu Usuário" class="form-control">
+        </div>
+        <div class="container-fluid">
+            <label for="pswrd" class="form-label">Senha:</label>
+            <input type="password" id="pswrd" name="pswrd" placeholder="Digite sua Senha" class="form-control">
+        </div>
+        <div class="container-fluid">
+            <input class="btn btn-primary" type="submit" name="autenticar" value="Cadastrar">
+            <input class="btn btn-warning" type="reset" name="limpar" value="Limpar">
+        </div>
+    </form>
+</div>
+{% endblock %}

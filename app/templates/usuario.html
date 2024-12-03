@@ -1,0 +1,21 @@
+{% extends "templs/formTemplate.html" %}
+
+{% block title %} Página do Usuário {% endblock %}
+
+{% block formulario %}
+<div style="text-align:center">
+    <h2>Página do Usuário</h2>
+    <div class="container-fluid">
+        <label for="name" class="form-label">Nome: {{name}}</label>
+    </div>
+    <div class="container-fluid">
+        <label for="cpf" class="form-label">CPF: {{cpf}}</label>
+    </div>
+    <div class="container-fluid">
+        <label for="user" class="form-label">Usuário: {{user}}</label>
+    </div>
+    <div class="container-fluid">
+        <label for="pswrd" class="form-label">Usuário: {{password}}</label>
+    </div>
+</div>
+{% endblock %}

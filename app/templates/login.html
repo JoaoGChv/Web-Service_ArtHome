@@ -1,0 +1,21 @@
+{% extends "templs/formTemplate.html" %}
+{% block title %} Autenticação - Página 2 {% endblock %}
+{% block formulario %}
+<div style="text-align:center">
+    <h2>Autenticação</h2>
+    <form action="/autentica" method="POST">
+        <div class="container-fluid">
+            <label for="user" class="form-label">Usuário:</label>
+            <input type="text" id="user" name="user" placeholder="Digite seu Usuário" class="form-control">
+        </div>
+        <div class="container-fluid">
+            <label for="pswrd" class="form-label">Senha:</label>
+            <input type="password" id="pswrd" name="pswrd" placeholder="Digite sua Senha" class="form-control">
+        </div>
+        <div class="container-fluid">
+            <input class="btn btn-primary" type="submit" name="autenticar" value="Autenticar">
+            <input class="btn btn-warning" type="reset" name="limpar" value="Limpar">
+        </div>
+    </form>
+</div>
+{% endblock %}
