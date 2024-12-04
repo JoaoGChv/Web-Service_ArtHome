@@ -71,7 +71,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto align-items-center">
             <div class="text-center">
-              <a href="index" class="btn btn-primary">Página Inicial</a>
+              <a href="/" class="btn btn-primary">Página Inicial</a>
             </div>
             <!-- Dropdown para Login e Criar Conta -->
             <li class="nav-item dropdown">
@@ -81,8 +81,7 @@
                 <li><a class="dropdown-item" href="{{ url_for('signin') }}">Crie uma conta</a></li>
               </ul>
             </li>
-            <!-- Novo item de Contato -->
-            <li class="nav-item"><a class="nav-link" href="contact">Contato</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
           </ul>
         </div>
       </div>
@@ -95,8 +94,6 @@
         Seu navegador não suporta vídeos HTML5.
       </video>
       <h1 class="display-4">Welcome to Art Home</h1>
-      <div class="d-flex gap-3 mt-4">
-      </div>
     </header>
 
     <!-- Main Content -->
@@ -107,10 +104,11 @@
     <br>
 
     <!-- Footer -->
-    <footer class="text-light py-4">
+    <footer class="text-light py-4" id="contact">
       <div class="container text-center">
         <p>© 2024 Art Home - All Rights Reserved</p>
-        <p> Trabalhe conosco!</p>
+        <!-- Redireciona para a nova página -->
+        <p><a class="nav-item"><a class="nav-link"href="trabalhe_conosco.html">Trabalhe conosco!</a></p>
         <p>Contact us: <a href="mailto:contact@example.com">contact@example.com</a></p>
         <div class="d-flex justify-content-center gap-3 mt-3">
           <a href="#" class="text-light"><i class="bi bi-facebook"></i></a>

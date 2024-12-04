@@ -1,29 +1,112 @@
-{% extends "templs/formTemplate.html" %}
-{% block title %} Cadastro de Cliente {% endblock %}
-{% block formulario %}
-<div style="text-align:center">
-    <h2>Formulário de Cadastro de Cliente</h2>
-    <form action="/cadastrarCli" method="POST">
-        <div class="container-fluid">
-            <label for="name" class="form-label">Nome:</label>
-            <input type="text" id="name" name="name" placeholder="Digite seu Nome" class="form-control">
-        </div>
-        <div class="container-fluid">
-            <label for="cpf" class="form-label">CPF:</label>
-            <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" class="form-control">
-        </div>
-        <div class="container-fluid">
-            <label for="user" class="form-label">Usuário:</label>
-            <input type="text" id="user" name="user" placeholder="Digite seu Usuário" class="form-control">
-        </div>
-        <div class="container-fluid">
-            <label for="pswrd" class="form-label">Senha:</label>
-            <input type="password" id="pswrd" name="pswrd" placeholder="Digite sua Senha" class="form-control">
-        </div>
-        <div class="container-fluid">
-            <input class="btn btn-primary" type="submit" name="autenticar" value="Cadastrar">
-            <input class="btn btn-warning" type="reset" name="limpar" value="Limpar">
-        </div>
-    </form>
-</div>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Estilos adicionais do login.html */
+        body {
+            background-color: #0a0a0a;
+            /* Cor nanquim */
+            color: white;
+            /* Texto branco */
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #1c1c1c;
+            /* Cor levemente mais clara para destacar o formulário */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 300px;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+            /* Ajuste opcional: alinha o texto à esquerda */
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #444;
+            border-radius: 4px;
+            background-color: #333;
+            color: white;
+            box-sizing: border-box;
+            /* Garante que o padding não aumente a largura total */
+            text-align: center;
+            /* Centraliza o texto dentro do campo */
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #444;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-container button:hover {
+            background-color: #555;
+        }
+
+        .error {
+            border-color: red;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h3>Cadastro de Cliente</h3>
+        <form id="signup-form" action="/cadastrarCli" method="POST">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" placeholder="Digite seu Nome" required>
+
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required>
+
+            <label for="user">Usuário:</label>
+            <input type="text" id="user" name="user" placeholder="Digite seu Usuário" required>
+
+            <label for="pswrd">Senha:</label>
+            <input type="password" id="pswrd" name="pswrd" placeholder="Digite sua Senha" required>
+
+            <button type="submit">Cadastrar</button>
+            <button type="reset">Limpar</button>
+        </form>
+
+        <p id="message"></p>
+    </div>
+
+</body>
+
+</html>
